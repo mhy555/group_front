@@ -1,0 +1,45 @@
+stages:
+  - pull_code
+  - install_deps
+  - test
+  - build
+  - deploy
+cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - node_modules/
+    - dist/
+
+pull_code:
+  stage: pull_code
+  only:
+    - develop
+    - master
+  script:
+    - cd /data/automated-story-telling
+    - sudo git pull
+
+install_deps:
+  stage: install_deps
+  only:
+    - develop
+    - master
+  script:
+    - cd /data/automated-story-telling
+    - sudo npm install
+# test:
+#   stage: test
+#   only:
+#     - develop
+#     - master
+#   script:
+#     - npm run test
+build:
+  stage: build
+  only:
+    - develop
+    - master
+  script:
+    - cd /data/automated-story-telling
+    - sudo npm run clear
+    - sudo npm run build

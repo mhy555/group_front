@@ -1,0 +1,227 @@
+@import './font-size.less';
+
+#loading
+{
+    display: none;
+    position:fixed;
+    top:45%;
+    left:22%;
+    z-index:2;
+    height: 15%;
+    width: 15%;
+    .loading-image {
+      background: url("../images/loading2.gif") center no-repeat;
+      background-size: contain;
+      height: 90%;
+      width: 90%;
+    }
+    .loading-text {
+      width: 90%;
+      text-align: center;
+    }
+}
+
+html,body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  background-color: #E0FFFF;
+  background: url("../images/bg.jpg") center no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+li{
+  float:left;
+}
+
+a:link,a:visited {
+  display:block;
+  width:200px;
+  font-weight:bold;
+  color:#FFFFFF;
+  background-color:#bebebe;
+  text-align:center;
+  padding:14px;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* {
+  max-height: 100000px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  .f16;
+  font: inherit;
+  vertical-align: baseline;
+}
+input {
+    // outline: none;
+}
+
+div.logo {
+  background: url("../images/logo.png") center no-repeat;
+  background-size: 100% 100%;
+  width: 60%;
+  height: 10%;
+  position: absolute;
+  left: 4%;
+  top: 20px;
+}
+
+button {
+  display: inline-block;
+  .f16;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+  padding: 5px 8px;
+}
+
+.switch-button {
+    display: inline-block;
+    .f16;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    background: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #FF9933;
+}
+.switch-button:hover {
+  background-color: #FFCC00;
+}
+
+div.picture-area {
+    position: relative;
+    height: 80%;
+    left: 5%;
+    width: 50%;
+    #cvs, #bgd, .speech-area {
+      position: absolute;
+      left: 0;
+      height: 90%;
+      width: 100%;
+      bottom: -12%;
+    }
+    #cvs {
+      z-index: 1;
+    }
+    #bgd {
+      z-index: 0;
+    }
+    .speech-area {
+      z-index: 2;
+    }
+    .preview-btn {
+        top: 118%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: #FF9933;
+    }
+    .preview-btn:hover {
+      background-color: #FFCC00;
+    }
+    .left-btn, .right-btn {
+        top: 118%;
+        padding: 5px 10px;
+    }
+    .left-btn {
+        left: 25%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .right-btn {
+        right: 25%;
+        transform: translateX(50%) translateY(-50%);
+    }
+}
+
+div.text-input {
+    position: absolute;
+    height: 50%;
+    right: 2%;
+    height: 20%;
+    width: 40%;
+    bottom: 30%;
+    #story-input {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+div.button-area {
+  position: absolute;
+  height: 10%;
+  width: 40%;
+  right: 2%;
+  bottom: 15%;
+  .switch-scene {
+    background-color: #FF9933;
+    float: right;
+  }
+  .switch-scene:hover {
+    background-color: #FFCC00;
+  }
+  #startBtn{
+    display: none;
+    float: right;
+    color: #fff;
+    background-color: #4CAF50;
+    margin-left: 3%;
+  }
+  #startBtn:hover {
+    background-color: #00CC33;
+  }
+  .text-submit {
+    margin-left: 3%;
+    float: right;
+    background-color: #4CAF50;
+  }
+  .text-submit:hover {
+    background-color: #00CC33;
+  }
+}
+// .bubble {
+//   width: 120px;
+//   padding: 10px;
+//   border-radius: 18px 18px 18px 0 ;
+//   background: #F4A460;
+//   position: relative;
+//   cursor:pointer;
+//   span {display:table;margin: 0 auto}
+// }
+// .triangle {
+//   position: relative;
+//   width: 0;
+//   border-top: 20px solid #F4A460;
+//   border-right: 15px solid transparent;
+//   cursor:pointer;
+// }

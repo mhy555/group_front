@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automated Story Illustration</title>
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="picture-area">
+        <button class="switch-button right-btn" id = "right-btn">&gt</button>
+        <button class="switch-button left-btn" id = "left-btn">&lt</button>
+        <canvas id="cvs" width="800" height="600" style="border-style: ridge;"></canvas>
+        <canvas id="bgd" width="800" height="600" style="border-style: ridge; background: white"></canvas>
+        <!-- <div class="speech-area"></div> -->
+        <button class="switch-button preview-btn" id = "preview-btn">preview</button>
+    </div>
+    <div class="text-input">
+        <textarea name="story-input" id="story-input" cols="60" rows="8"></textarea>
+    </div>
+    <div class="button-area">
+      <button class="text-submit">submit</button>
+      <button id="startBtn">voice</button>
+      <button class="switch-scene" id = "switch-scene">switch scene</button>
+    </div>
+    <div id="loading">
+      <div class="loading-image"></div>
+      <div class="loading-text">loading...</div>
+    </div>
+</body>
+</html>
